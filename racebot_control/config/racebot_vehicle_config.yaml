@@ -1,0 +1,13 @@
+vehicle_config:
+  RF: 3.3
+  RB: 0.8
+  W: 2.4
+  WD: 1.68
+  WB: 2.5
+  TR: 0.44
+  TW: 0.7
+  steer_max: 0.78539816339
+  steer_change_max: 0.5235987756
+  speed_max: 15.2777777778
+  speed_min: -5.55555555556
+  acceleration_max: 1.0

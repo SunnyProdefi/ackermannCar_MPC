@@ -1,0 +1,44 @@
+digraph G {
+node [shape=box];
+"base_footprint" [label="base_footprint"];
+"base_link" [label="base_link"];
+"camera" [label="camera"];
+"base_inertia" [label="base_inertia"];
+"imu" [label="imu"];
+"left_rear_wheel" [label="left_rear_wheel"];
+"left_steering_hinge" [label="left_steering_hinge"];
+"left_front_wheel" [label="left_front_wheel"];
+"lidar" [label="lidar"];
+"real_sense" [label="real_sense"];
+"realsense_depth" [label="realsense_depth"];
+"right_rear_wheel" [label="right_rear_wheel"];
+"right_steering_hinge" [label="right_steering_hinge"];
+"right_front_wheel" [label="right_front_wheel"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_footprint" -> "base_link2base_footprint" [label="xyz: 0 0 0.032 \nrpy: 0 -0 0"]
+"base_link2base_footprint" -> "base_link"
+"base_link" -> "camera_joint" [label="xyz: 0.14851 0.0022137 0.0975 \nrpy: 0 -0 0"]
+"camera_joint" -> "camera"
+"base_link" -> "chassis_inertia_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"chassis_inertia_joint" -> "base_inertia"
+"base_link" -> "imu_joint" [label="xyz: 0 0 0.02 \nrpy: 0 -0 0"]
+"imu_joint" -> "imu"
+"base_link" -> "left_rear_wheel_joint" [label="xyz: -0.13 0.09 0 \nrpy: 0 -0 0"]
+"left_rear_wheel_joint" -> "left_rear_wheel"
+"base_link" -> "left_steering_hinge_joint" [label="xyz: 0.13 0.065 0 \nrpy: 0 -0 0"]
+"left_steering_hinge_joint" -> "left_steering_hinge"
+"left_steering_hinge" -> "left_front_wheel_joint" [label="xyz: 0 0.025 0 \nrpy: 0 -0 0"]
+"left_front_wheel_joint" -> "left_front_wheel"
+"base_link" -> "lidar_joint" [label="xyz: 0.093603 0 0.12377 \nrpy: 0 -0 0"]
+"lidar_joint" -> "lidar"
+"base_link" -> "realsense_joint" [label="xyz: 0.18864 0.0038046 0.052021 \nrpy: 0 -0 0"]
+"realsense_joint" -> "real_sense"
+"real_sense" -> "realsense_depth_joint" [label="xyz: 0 0 0 \nrpy: -1.5708 -0 -1.5708"]
+"realsense_depth_joint" -> "realsense_depth"
+"base_link" -> "right_rear_wheel_joint" [label="xyz: -0.13 -0.09 0 \nrpy: 0 -0 0"]
+"right_rear_wheel_joint" -> "right_rear_wheel"
+"base_link" -> "right_steering_hinge_joint" [label="xyz: 0.13 -0.065 0 \nrpy: 0 -0 0"]
+"right_steering_hinge_joint" -> "right_steering_hinge"
+"right_steering_hinge" -> "right_front_wheel_joint" [label="xyz: 0 -0.025 0 \nrpy: 0 -0 0"]
+"right_front_wheel_joint" -> "right_front_wheel"
+}
