@@ -10,8 +10,9 @@ This project implements a Model Predictive Control (MPC) algorithm for trajector
 
 1. Clone the repository:
    ```sh
+   mkdir -p ~/<workspace>/src
+   cd ~/<workspace>/src
    git clone https://github.com/SunnyProdefi/ackermannCar_MPC.git
-   cd ackermannCar_MPC
    ```
 
 2. Install dependencies:
@@ -28,6 +29,7 @@ This project implements a Model Predictive Control (MPC) algorithm for trajector
 
 3. Build the project:
    ```sh
+   cd ~/ackermannCar_MPC
    catkin_make
    source devel/setup.bash
    ```
