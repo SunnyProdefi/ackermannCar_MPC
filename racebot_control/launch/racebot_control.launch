@@ -21,10 +21,10 @@
 	</node>
 
   <!-- servo node -->
-  <node pkg="racebot_control" type="servo_commands.py" name="servo_commands" output="screen"/>
+  <!-- <node pkg="racebot_control" type="servo_commands.py" name="servo_commands" output="screen"/> -->
 
   <!-- servo node -->
-  <node pkg="racebot_control" type="transform.py" name="transform" output="screen"/>
+  <!-- <node pkg="racebot_control" type="transform.py" name="transform" output="screen"/> -->
 
 
   <!-- Allow for Gazebo to broadcast odom -->

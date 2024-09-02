@@ -39,7 +39,7 @@
 
     <!--Launch the simulation joystick control-->
   <rosparam command="load" file="$(find racebot_gazebo)/config/keyboard_teleop.yaml" />
-  <node pkg="racebot_gazebo" type="keyboard_teleop.py" name="keyboard_teleop" />
+  <!-- <node pkg="racebot_gazebo" type="keyboard_teleop.py" name="keyboard_teleop" /> -->
 
 <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_publisher" args="0 0 0 -1.57 0 -1.57 /real_sense /realsense_depth" /> -->
     <!-- 运行rviz -->

@@ -141,6 +141,10 @@ add_executable(mpc src/mpc.cpp)
 target_link_libraries(mpc ${catkin_LIBRARIES} OsqpEigen::OsqpEigen)
 add_dependencies(mpc ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_executable(lqr src/LQR.cpp)
+target_link_libraries(lqr ${catkin_LIBRARIES})
+add_dependencies(lqr ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 add_executable(testcar src/testcar.cpp)
 target_link_libraries(testcar ${catkin_LIBRARIES})
 add_dependencies(testcar ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})

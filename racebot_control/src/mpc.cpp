@@ -510,6 +510,7 @@ calc_ref_trajectory_in_T_step(const Node &node, PATH &ref_path,
 void calc_linear_discrete_model(double v, double phi, double delta,
                                 Eigen::MatrixXd &A, Eigen::MatrixXd &B) {
   // Initialize matrices A and B, and vector C
+  
   A = Eigen::MatrixXd(4, 4);
   B = Eigen::MatrixXd(4, 2);
 
